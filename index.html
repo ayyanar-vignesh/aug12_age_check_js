@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="login.html">login</a>
+    <form>
+        <input type="number" placeholder="enter your age" id="age">
+        <br>
+        <br>
+        <button type="button" onclick="form_submit()">submit</button>
+    </form>
+    <h1 id="output"></h1>
+   
+
+    <script>
+        function form_submit(){
+            var age=document.getElementById('age').value;
+            // console.log(typeof(age));
+
+            if (parseInt(age)>=25 && parseInt(age)<=50){
+               
+                if (parseInt(age)==30){
+                    document.getElementById('output').innerHTML="hello 30's kids you can vite and stand by election";
+                }
+                else{
+                    document.getElementById('output').innerHTML='you can vote and stand by election';
+
+                }
+
+            }
+            else if(parseInt(age)>=18 && parseInt(age)<25){
+                document.getElementById('output').innerHTML='just you can vote';
+            }
+            else if(parseInt(age)>50){
+                document.getElementById('output').innerHTML='you cn vote and youre elegibe to plly senior citoxzen';
+            }
+            else{
+                
+                var low_age=18-age;
+                document.getElementById('output').innerHTML='sorry you cannot vote pls come after '+low_age+' years';
+
+            }
+
+
+        }
+    
+
+    </script>
+    
+</body>
+</html>

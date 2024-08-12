@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <input type="text" placeholder="enter username" id="username">
+        <br>
+        <span id="user_error" style="color: red;"></span>
+        <br>
+        <input type="password" placeholder="enter password" id="password">
+        <br>
+        <span id="pass_error" style="color: red;"></span>
+        <br>
+        <button type="button" onclick="login_submit()">login</button>
+        <a href="dashboard.html">go to dashboard</a>
+    </form>
+    
+    <script>
+        function login_submit(){
+            var username=document.getElementById('username').value;
+            var password=document.getElementById('password').value;
+
+            if (username==""){
+                document.getElementById('user_error').innerHTML='pls enter username';
+            }
+            if (password==''){
+                document.getElementById('pass_error').innerHTML='pls enter password';
+
+            }
+            if (username=='zukun' && password=='@1234'){
+                alert("login success");
+            }
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>
